@@ -1,0 +1,71 @@
+type Timestamp = int;
+type Subaccount = blob;
+type Result_2 = 
+ variant {
+   err: text;
+   ok: text;
+ };
+type Result_1 = 
+ variant {
+   err: text;
+   ok: BoosterAccount;
+ };
+type Result = 
+ variant {
+   err: text;
+   ok: BoostRequest;
+ };
+type Main = 
+ service {
+   acceptBoostRequest: (BoostId) -> (text);
+   checkBTCDeposit: (BoostId) -> (Result);
+   getAllBoostRequests: () -> (vec BoostRequest) query;
+   getAllBoosterAccounts: () -> (vec BoosterAccount) query;
+   getBoostRequest: (BoostId) -> (opt BoostRequest) query;
+   getBoostRequestBTCAddress: (BoostId) -> (Result_2);
+   getBoosterAccount: (principal) -> (opt BoosterAccount) query;
+   getCanisterPrincipal: () -> (principal) query;
+   getDirectBTCAddress: () -> (text);
+   getPendingBoostRequests: () -> (vec BoostRequest) query;
+   getUserBoostRequests: (principal) -> (vec BoostRequest) query;
+   registerBoostRequest: (Amount, float64, nat, opt principal) -> (Result);
+   registerBoosterAccount: () -> (Result_1);
+   updateBoosterDeposit: (principal, Amount) -> (Result_1);
+   updateReceivedBTC: (BoostId, Amount) -> (Result);
+   withdrawBoosterFunds: (Amount) -> (text);
+ };
+type BoosterAccount = 
+ record {
+   availableBalance: Amount;
+   createdAt: Timestamp;
+   owner: principal;
+   subaccount: Subaccount;
+   totalDeposited: Amount;
+   updatedAt: Timestamp;
+ };
+type BoostStatus = 
+ variant {
+   active;
+   cancelled;
+   completed;
+   pending;
+ };
+type BoostRequest = 
+ record {
+   amount: Amount;
+   booster: opt principal;
+   btcAddress: opt text;
+   confirmationsRequired: nat;
+   createdAt: Timestamp;
+   id: BoostId;
+   maxFeePercentage: float64;
+   owner: principal;
+   preferredBooster: opt principal;
+   receivedBTC: Amount;
+   status: BoostStatus;
+   subaccount: Subaccount;
+   updatedAt: Timestamp;
+ };
+type BoostId = nat;
+type Amount = nat;
+service : () -> Main

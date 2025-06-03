@@ -1,0 +1,61 @@
+{
+  "name": "@ckboost/booster",
+  "version": "0.1.0",
+  "description": "Liquidity provider toolkit for CKBoost - Create and manage ck-token liquidity pools on Internet Computer",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint src --ext .ts,.tsx",
+    "clean": "rm -rf dist",
+    "test": "echo \"No tests yet\"",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "ckboost",
+    "ck-tokens",
+    "liquidity-provider",
+    "internet-computer",
+    "icp",
+    "pool-management",
+    "yield-farming",
+    "fee-optimization",
+    "typescript"
+  ],
+  "author": "CKBoost Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ckboost/ckboost-packages",
+    "directory": "packages/booster"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.0"
+  },
+  "dependencies": {
+    "@dfinity/agent": "^2.4.1",
+    "@dfinity/candid": "^2.4.1",
+    "@dfinity/identity": "^2.4.1",
+    "@dfinity/principal": "^2.4.1",
+    "@types/big.js": "^6.2.2",
+    "@types/node": "^22.15.29",
+    "big.js": "^6.2.2",
+    "date-fns": "^2.30.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
