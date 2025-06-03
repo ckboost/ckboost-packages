@@ -1,0 +1,23 @@
+{
+  "name": "ckboost-booster-sample",
+  "version": "1.0.0",
+  "description": "Sample CKBoost liquidity provider bot using @ckboost/booster",
+  "type": "module",
+  "main": "script.ts",
+  "scripts": {
+    "start": "tsx script.ts",
+    "dev": "tsx watch script.ts"
+  },
+  "dependencies": {
+    "@ckboost/booster": "^0.1.0",
+    "dotenv": "^16.0.0",
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.0.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0"
+  },
+  "author": "CKBoost Team",
+  "license": "MIT"
+} 
