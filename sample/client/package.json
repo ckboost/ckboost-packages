@@ -1,0 +1,27 @@
+{
+  "name": "ckboost-client-sample",
+  "version": "1.0.0",
+  "description": "Sample implementation using @ckboost/client for dApp integration",
+  "main": "script.ts",
+  "scripts": {
+    "start": "tsx script.ts",
+    "dev": "tsx watch script.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.57",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.0"
+  },
+  "keywords": [
+    "ckboost",
+    "client",
+    "ckTESTBTC",
+    "icp",
+    "bitcoin"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@ckboost/client": "^0.1.0"
+  }
+}

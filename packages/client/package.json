@@ -21,7 +21,7 @@
     "lint": "eslint src --ext .ts,.tsx",
     "clean": "rm -rf dist",
     "test": "echo \"No tests yet\"",
-    "prepublishOnly": "pnpm build"
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "ckboost",
