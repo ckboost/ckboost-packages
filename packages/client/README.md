@@ -326,8 +326,8 @@ import { ckBTCClient, ckETHClient, ckUSDCClient } from '@ckboost/client';
 ## Support
 
 - **Documentation**: [GitBook Documentation](https://ckboost.gitbook.io)
-- **Issues**: [GitHub Issues](https://github.com/your-org/ckboost)
-- **Discord**: [CKBoost Community](https://discord.gg/ckboost)
+- **Issues**: [GitHub Issues](https://github.com/ckboost/ckboost-packages)
+- **OpenChat**: [CKBoost Community](https://oc.app/group/o3ba4-zqaaa-aaaac-avyea-cai)
 
 ## License
 
